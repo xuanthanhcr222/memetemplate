@@ -1,0 +1,26 @@
+.meme-img {
+    width: auto;
+    max-height: 400px;
+    
+}
+
+.meme-name {
+
+}
+.container {
+    width: 600px;
+    height: 600px;
+    
+}
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.btn {
+    width: 100px;
+    height: 100px;
+}
