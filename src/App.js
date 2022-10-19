@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
-import PostList from './Component/PostList/index.jsx';
+import '../src/Component/Style/style.css';
+import Meme from './Component/Meme/index.jsx';
 
 function App() {
-  const [postList, setpostList] = useState([]);
+  const [meme, setmeme] = useState([]);
   const [fetching, setfetching] = useState("false");
 
   useEffect(() => {
-    async function fetchPostList() {
+    async function fetchMeme() {
       // const requestUrl = 'http://js-post-api.herokuapp.com/api/posts?_limit=10&_page=1';
       const requestUrl = 'https://api.imgflip.com/get_memes';
       const response = await fetch(requestUrl);
@@ -18,16 +18,18 @@ function App() {
       const pick = Math.floor(Math.random()*memes.length);
       itemmeme.push(memes[pick]);
       console.log(memes[pick]);
-      setpostList(itemmeme);
+      setmeme(itemmeme);
     }
-    fetchPostList();
+    fetchMeme();
   },
   [fetching]);
 
   return (
     <div className="App">
+      <h3 className='title'>RANDOM MEME EVERYDAY</h3>
+      <h3 className='description'>ENJOY YOUR FUNNY MOMENT WITH YOUR SOULMATE!</h3>
+      <Meme posts = {meme}></Meme>
       <button className="btn" onClick={()=> setfetching(!fetching)} > Ramdom Meme</button>
-      <PostList posts = {postList}></PostList>
     </div>
   );
 }

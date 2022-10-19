@@ -1,26 +1,30 @@
 .meme-img {
     width: auto;
-    max-height: 400px;
-    
+    max-height: 350px;
 }
-
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: -8pt;
+}
+.description {
+    font-size: 20px;
+    font-weight: lighter;
+}
 .meme-name {
-
-}
-.container {
-    width: 600px;
-    height: 600px;
-    
+    font-size: 20px;
+    font-weight: normal;
 }
 .App {
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column;*/
     justify-content: center;
     align-items: center;
+    
   }
 
 .btn {
-    width: 100px;
-    height: 100px;
+    width: 170px;
+    height: 40px;
 }
